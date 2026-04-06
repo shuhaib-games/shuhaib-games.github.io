@@ -9,10 +9,12 @@
 </head>
 <body>
 
+    <div class="scanlines"></div>
+
     <div class="video-container">
         <div class="overlay"></div>
-        <video autoplay muted loop id="bg-video">
-            <source src="your-gameplay-loop.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="videos/hero-bg.mp4" type="video/mp4">
         </video>
     </div>
 
@@ -23,43 +25,64 @@
                 <a href="#about">BRIEFING</a>
                 <a href="#missions">MISSIONS</a>
                 <a href="#skills">LOADOUT</a>
-                <a href="#contact" class="btn-neon">ESTABLISH COMMS</a>
+                <a href="mailto:your-email@gmail.com" class="btn-neon">ESTABLISH COMMS</a>
             </div>
         </nav>
 
         <section id="hero">
             <div class="hero-content">
-                <h2 class="glitch" data-text="GAME DEVELOPER">GAME DEVELOPER</h2>
-                <h1>SHUHAIB TP</h1>
-                <p>C# / UNITY / AI SYSTEMS / 3D & 2D WORLDS</p>
-                <div class="hero-btns">
-                    <a href="#missions" class="main-btn">VIEW MISSIONS</a>
-                    <a href="resume.pdf" class="alt-btn">DOWNLOAD INTEL</a>
+                <h2 class="glitch-text" data-text="UNITY DEVELOPER">UNITY DEVELOPER</h2>
+                <h1 class="main-title">SHUHAIB TP</h1>
+                
+                <div class="typewriter-container">
+                    <span id="typewriter"></span><span class="cursor">|</span>
                 </div>
             </div>
-        </section>
-
-        <section id="missions">
-            <div class="section-header">
-                <span class="tag">ACTIVE OPERATIONS</span>
-                <h3>PROJECT LOG</h3>
-            </div>
-            
-            <div class="project-grid">
-                <div class="card">
-                    <div class="card-img" style="background-image: url('game1.jpg');"></div>
-                    <div class="card-info">
-                        <span class="status">MISSION ACCOMPLISHED</span>
-                        <h4>ZOMBIE FPS AI</h4>
-                        <p>Implemented Finite State Machines for enemy pathfinding and combat logic.</p>
-                        <div class="tech-tags">
-                            <span>UNITY 3D</span><span>C#</span><span>AI SYSTEMS</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
         </section>
     </main>
 
+    <script>
+        // TYPEWRITER LOGIC
+        const textElement = document.getElementById('typewriter');
+        const phrases = [
+            "C# / UNITY / AI SYSTEMS",
+            "3D & 2D WORLD BUILDING",
+            "GAMEPLAY PROGRAMMING",
+            "PERFORMANCE OPTIMIZATION",
+            "MISSION READY"
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
 </body>
 </html>
