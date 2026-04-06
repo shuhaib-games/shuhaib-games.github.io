@@ -15,12 +15,12 @@
     <nav>
         <div class="logo">SHUHAIB<span>TP</span></div>
         <div class="nav-links">
-            <a href="#hero">HOME</a>
-            <a href="#about">BRIEFING</a>
-            <a href="#missions">MISSIONS</a>
-            <a href="#skills">LOADOUT</a>
-            <a href="Shuhaib_TP_Resume.pdf" download="Shuhaib_TP_Resume.pdf" class="download-btn">DOWNLOAD INTEL</a>
-            <a href="#contact" class="btn-neon">RADIO CHANNEL</a>
+            <a href="#hero" class="nav-item">HOME</a>
+            <a href="#about" class="nav-item">BRIEFING</a>
+            <a href="#missions" class="nav-item">MISSIONS</a>
+            <a href="#skills" class="nav-item">LOADOUT</a>
+            <a href="Shuhaib_TP_Resume.pdf" download="Shuhaib_TP_Resume.pdf" class="nav-item highlight">DOWNLOAD INTEL</a>
+            <a href="#contact" class="nav-item special">RADIO CHANNEL</a>
         </div>
     </nav>
 
@@ -90,12 +90,12 @@
                 <h3>LOADOUT</h3>
             </div>
             <div class="loadout-grid">
-                <div class="skill-card"><span>🎮</span><p>UNITY ENGINE</p></div>
-                <div class="skill-card"><span>#️⃣</span><p>C# SCRIPTING</p></div>
-                <div class="skill-card"><span>🤖</span><p>AI BEHAVIOR</p></div>
-                <div class="skill-card"><span>🎨</span><p>BLENDER 3D</p></div>
-                <div class="skill-card"><span>⚙️</span><p>GAME PHYSICS</p></div>
-                <div class="skill-card"><span>🐞</span><p>QA & DEBUGGING</p></div>
+                <div class="skill-card"><span class="glow-icon">🎮</span><p>UNITY ENGINE</p></div>
+                <div class="skill-card"><span class="glow-icon">#️⃣</span><p>C# SCRIPTING</p></div>
+                <div class="skill-card"><span class="glow-icon">🤖</span><p>AI BEHAVIOR</p></div>
+                <div class="skill-card"><span class="glow-icon">🎨</span><p>BLENDER 3D</p></div>
+                <div class="skill-card"><span class="glow-icon">⚙️</span><p>GAME PHYSICS</p></div>
+                <div class="skill-card"><span class="glow-icon">🐞</span><p>QA & DEBUGGING</p></div>
             </div>
         </div>
     </section>
@@ -109,8 +109,27 @@
             <div class="contact-box">
                 <div class="contact-item"><p class="label">OPERATIVE</p><p class="value">SHUHAIB TP</p></div>
                 <div class="contact-item"><p class="label">LOCATION</p><p class="value">MALAPPURAM, KERALA</p></div>
-                <div class="contact-item"><p class="label">EMAIL</p><a href="mailto:shuhaibtp423777@gmail.com" class="value">shuhaibtp423777@gmail.com</a></div>
-                <div class="contact-item"><p class="label">PHONE</p><a href="tel:+918606912678" class="value">+91 8606912678</a></div>
+                
+                <div class="social-grid">
+                    <div class="contact-item">
+                        <p class="label">LINKEDIN</p>
+                        <a href="http://www.linkedin.com/in/shuhaib-tp" target="_blank" class="value social-link">
+                            👤 LINKEDIN
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <p class="label">GITHUB</p>
+                        <a href="https://github.com/shuhaib-games" target="_blank" class="value social-link">
+                            📂 GITHUB
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <p class="label">ITCH.IO</p>
+                        <a href="https://shuhaibtp.itch.io/" target="_blank" class="value social-link">
+                            🕹️ ITCH.IO
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -139,7 +158,7 @@
             particles = [];
             for(let i=0; i<85; i++) particles.push({
                 x: Math.random()*canvas.width, y: Math.random()*canvas.height,
-                vx: (Math.random()-0.5)*0.6, vy: (Math.random()-0.5)*0.6
+                vx: (Math.random()-0.5)*0.5, vy: (Math.random()-0.5)*0.5
             });
         }
         function animate() {
