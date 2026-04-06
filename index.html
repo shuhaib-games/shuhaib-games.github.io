@@ -24,7 +24,8 @@
             <a href="#hero">HOME</a>
             <a href="#about">BRIEFING</a>
             <a href="#missions">MISSIONS</a>
-            <a href="mailto:your-email@gmail.com" class="btn-neon">ESTABLISH COMMS</a>
+            <a href="#skills">LOADOUT</a>
+            <a href="#contact" class="btn-neon">RADIO CHANNEL</a>
         </div>
     </nav>
 
@@ -44,34 +45,91 @@
                 <span class="tag">CLASSIFIED INTEL</span>
                 <h3>MISSION BRIEFING</h3>
             </div>
-            
-            <div class="briefing-box">
-                <div class="briefing-content">
-                    <p class="meta-data"><strong>SUBJECT:</strong> SHUHAIB TP</p>
-                    <p class="meta-data"><strong>CLASS:</strong> SYSTEMS ENGINEER / UNITY DEVELOPER</p>
-                    <div class="divider"></div>
-                    <p class="bio-text">
-                        A highly adaptive Unity Game Developer specializing in <strong>C# scripting</strong> and <strong>AI behavior logic</strong>. 
-                        With a tactical background in both 2D and 3D environment architecture, I build immersive worlds where performance meets high-fidelity gameplay. 
-                    </p>
-                    <p class="bio-text">
-                        Expertise in constructing complex <strong>Finite State Machines (FSM)</strong>, optimizing physics engines, and creating responsive character controllers. Currently deployed in Malappuram, Kerala—ready to engineer the next generation of interactive experiences.
-                    </p>
-                    
-                    <div class="stats-grid">
-                        <div class="stat-box">
-                            <span class="stat-number">4+</span>
-                            <p class="stat-label">GAMES BUILT</p>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-number">PRO</span>
-                            <p class="stat-label">QA & TESTING</p>
-                        </div>
-                        <div class="stat-box">
-                            <span class="stat-number">EXPERT</span>
-                            <p class="stat-label">AI SYSTEMS</p>
-                        </div>
+            <div class="content-box border-pink">
+                <p class="meta-data">SUBJECT: SHUHAIB TP</p>
+                <p class="meta-data">CLASS: SYSTEMS ENGINEER / UNITY DEVELOPER</p>
+                <div class="divider"></div>
+                <p class="bio-text">
+                    A highly adaptive Unity Game Developer specializing in <strong>C# scripting</strong> and <strong>AI behavior logic</strong>. 
+                    I build immersive worlds where performance meets high-fidelity gameplay. Currently deployed in Malappuram, Kerala.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-box"><span>4+</span><p>GAMES BUILT</p></div>
+                    <div class="stat-box"><span>PRO</span><p>QA & TESTING</p></div>
+                    <div class="stat-box"><span>EXPERT</span><p>AI SYSTEMS</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="missions">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">ACTIVE OPERATIONS</span>
+                <h3>MISSIONS</h3>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-img" style="background-image: url('images/project1.jpg');"></div>
+                    <div class="mission-info">
+                        <span class="status">COMPLETED</span>
+                        <h4>ZOMBIE SURVIVAL AI</h4>
+                        <p>3D FPS pathfinding system using Unity NavMesh and FSM logic.</p>
+                        <div class="mission-tech"><span>UNITY 3D</span><span>C#</span></div>
                     </div>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-img" style="background-image: url('images/project2.jpg');"></div>
+                    <div class="mission-info">
+                        <span class="status">COMPLETED</span>
+                        <h4>SAMURAI DASH 2D</h4>
+                        <p>2D platformer with custom physics and sprite animations.</p>
+                        <div class="mission-tech"><span>UNITY 2D</span><span>C#</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">EQUIPMENT & TECH</span>
+                <h3>TECHNICAL LOADOUT</h3>
+            </div>
+            <div class="loadout-grid">
+                <div class="skill-item"><span>🎮</span><p>UNITY ENGINE</p></div>
+                <div class="skill-item"><span>#️⃣</span><p>C# SCRIPTING</p></div>
+                <div class="skill-item"><span>🤖</span><p>AI BEHAVIOR</p></div>
+                <div class="skill-item"><span>🎨</span><p>BLENDER 3D</p></div>
+                <div class="skill-item"><span>⚙️</span><p>GAME PHYSICS</p></div>
+                <div class="skill-item"><span>🐞</span><p>QA & DEBUGGING</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">SECURE LINE</span>
+                <h3>RADIO CHANNEL</h3>
+            </div>
+            <div class="contact-box">
+                <div class="contact-detail">
+                    <p class="label">OPERATIVE NAME</p>
+                    <p class="value">SHUHAIB TP</p>
+                </div>
+                <div class="contact-detail">
+                    <p class="label">LOCATION</p>
+                    <p class="value">MALAPPURAM, KERALA</p>
+                </div>
+                <div class="contact-detail">
+                    <p class="label">EMAIL INTEL</p>
+                    <a href="mailto:shuhaibtp423777@gmail.com" class="value">shuhaibtp423777@gmail.com</a>
+                </div>
+                <div class="contact-detail">
+                    <p class="label">ENCRYPTED LINE</p>
+                    <a href="tel:+918606912678" class="value">+91 8606912678</a>
                 </div>
             </div>
         </div>
@@ -79,39 +137,17 @@
 
     <script>
         const textElement = document.getElementById('typewriter');
-        const phrases = [
-            "C# / UNITY / AI SYSTEMS",
-            "3D & 2D WORLD BUILDING",
-            "GAMEPLAY PROGRAMMING",
-            "PERFORMANCE OPTIMIZATION",
-            "MISSION READY"
-        ];
-        
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typeSpeed = 100;
+        const phrases = ["C# / UNITY / AI SYSTEMS", "3D & 2D WORLD BUILDING", "GAMEPLAY PROGRAMMING", "MISSION READY"];
+        let phraseIndex = 0, charIndex = 0, isDeleting = false, typeSpeed = 100;
 
         function type() {
             const currentPhrase = phrases[phraseIndex];
-            if (isDeleting) {
-                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
-                charIndex--;
-                typeSpeed = 50;
-            } else {
-                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
-                charIndex++;
-                typeSpeed = 100;
-            }
+            textElement.textContent = isDeleting ? currentPhrase.substring(0, charIndex - 1) : currentPhrase.substring(0, charIndex + 1);
+            charIndex = isDeleting ? charIndex - 1 : charIndex + 1;
+            typeSpeed = isDeleting ? 50 : 100;
 
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                isDeleting = true;
-                typeSpeed = 2000;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                typeSpeed = 500;
-            }
+            if (!isDeleting && charIndex === currentPhrase.length) { isDeleting = true; typeSpeed = 2000; }
+            else if (isDeleting && charIndex === 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; typeSpeed = 500; }
             setTimeout(type, typeSpeed);
         }
         document.addEventListener('DOMContentLoaded', type);
