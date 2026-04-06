@@ -1,0 +1,51 @@
+:root {
+    --neon-pink: #ff006e;
+    --neon-cyan: #00f5ff;
+    --dark-bg: #050505;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body { background: var(--dark-bg); color: white; overflow-x: hidden; }
+
+/* CINEMATIC VIDEO BACKGROUND */
+.video-container {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100vh; z-index: -2;
+}
+#bg-video { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.4) contrast(1.2); }
+.overlay {
+    position: absolute; top: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(5,5,5,0.2), var(--dark-bg));
+    z-index: -1;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex; justify-content: space-between; padding: 30px 10%; align-items: center;
+}
+.logo { font-family: 'Bebas Neue'; font-size: 2.5rem; letter-spacing: 2px; }
+.logo span { color: var(--neon-pink); }
+.nav-links a { color: white; text-decoration: none; margin-left: 30px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+.nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 10px var(--neon-cyan); }
+
+/* HERO SECTION */
+#hero { height: 80vh; display: flex; align-items: center; padding: 0 10%; }
+h1 { font-family: 'Bebas Neue'; font-size: 8rem; line-height: 1; margin-bottom: 10px; }
+h2 { color: var(--neon-pink); font-size: 1.2rem; letter-spacing: 5px; }
+
+/* PROJECT CARDS (MISSIONS) */
+.section-header { padding: 50px 10%; text-align: center; }
+.tag { color: var(--neon-cyan); border: 1px solid var(--neon-cyan); padding: 5px 15px; font-size: 0.7rem; }
+h3 { font-family: 'Bebas Neue'; font-size: 4rem; }
+
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; padding: 0 10% 100px; }
+.card { 
+    background: var(--glass); border: 1px solid rgba(255,255,255,0.1); 
+    backdrop-filter: blur(10px); transition: 0.4s; cursor: pointer;
+}
+.card:hover { border-color: var(--neon-pink); transform: translateY(-10px); }
+.card-img { height: 200px; background-size: cover; background-position: center; }
+.card-info { padding: 25px; }
+.status { font-size: 0.6rem; color: #00ff88; font-weight: bold; }
+.tech-tags span { background: rgba(0, 245, 255, 0.1); color: var(--neon-cyan); padding: 5px 10px; font-size: 0.7rem; margin-right: 5px; }
