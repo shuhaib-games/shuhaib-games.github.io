@@ -11,7 +11,7 @@
 
     <div class="scanlines"></div>
 
-    <div class="animated-bg"></div>
+    <canvas id="canvas-bg"></canvas>
 
     <nav>
         <div class="logo">SHUHAIB<span>TP</span></div>
@@ -20,7 +20,7 @@
             <a href="#about">BRIEFING</a>
             <a href="#missions">VIEW MISSIONS</a>
             <a href="#skills">LOADOUT</a>
-            <a href="https://your-link-here.com/resume.pdf" target="_blank">DOWNLOAD INTEL</a>
+            <a href="Shuhaib_TP_Resume.pdf" target="_blank" class="resume-link">DOWNLOAD INTEL</a>
             <a href="#contact" class="btn-neon">RADIO CHANNEL</a>
         </div>
     </nav>
@@ -48,9 +48,6 @@
                 <p class="bio-text">
                     A highly adaptive **Unity Game Developer** specializing in constructing robust **C# scripting** logic and immersive **3D & 2D gameplay mechanics**. I focus on building responsive systems where performance meets high-fidelity environmental architecture.
                 </p>
-                <p class="bio-text">
-                    Currently deployed in **Malappuram, Kerala**, engineering the next generation of interactive experiences. Specializing in Finite State Machines (FSM) for complex enemy AI and optimizing physics engines for smoother user controllers.
-                </p>
                 <div class="stats-grid">
                     <div class="stat-box"><span>4+</span><p>GAMES BUILT</p></div>
                     <div class="stat-box"><span>PRO</span><p>LEARNER</p></div>
@@ -72,7 +69,7 @@
                     <div class="mission-img" style="background-image: url('images/p1.jpg');"></div>
                     <div class="mission-info">
                         <span class="status">COMPLETE</span>
-                        <h4>ZOMBIE SURVIVAL AI</h4>
+                        <h4>3D ZOMBIE SURVIVAL</h4>
                         <p>3D FPS system with enemy AI behavior and custom controllers.</p>
                         <div class="mission-tech"><span>UNITY 3D</span><span>C#</span></div>
                     </div>
@@ -82,7 +79,7 @@
                     <div class="mission-info">
                         <span class="status">COMPLETE</span>
                         <h4>SAMURAI DASH 2D</h4>
-                        <p>2D platformer with custom physics and sprite animations.</p>
+                        <p>2D platformer with custom physics and animations.</p>
                         <div class="mission-tech"><span>UNITY 2D</span><span>C#</span></div>
                     </div>
                 </div>
@@ -135,21 +132,55 @@
     </section>
 
     <script>
+        // TYPEWRITER
         const textElement = document.getElementById('typewriter');
         const phrases = ["C# / UNITY / AI SYSTEMS", "3D & 2D WORLD BUILDING", "GAMEPLAY PROGRAMMING", "MISSION READY"];
         let pIdx = 0, cIdx = 0, isDel = false;
-
         function type() {
             const current = phrases[pIdx];
             textElement.textContent = isDel ? current.substring(0, cIdx - 1) : current.substring(0, cIdx + 1);
             cIdx = isDel ? cIdx - 1 : cIdx + 1;
-            let speed = isDel ? 50 : 100;
-
-            if (!isDel && cIdx === current.length) { isDel = true; speed = 2000; }
-            else if (isDel && cIdx === 0) { isDel = false; pIdx = (pIdx + 1) % phrases.length; speed = 500; }
-            setTimeout(type, speed);
+            if (!isDel && cIdx === current.length) { isDel = true; setTimeout(type, 2000); }
+            else if (isDel && cIdx === 0) { isDel = false; pIdx = (pIdx + 1) % phrases.length; setTimeout(type, 500); }
+            else { setTimeout(type, isDel ? 50 : 100); }
         }
-        document.addEventListener('DOMContentLoaded', type);
+        type();
+
+        // ANIMATED HACKER MESH BACKGROUND
+        const canvas = document.getElementById('canvas-bg');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        function init() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            for(let i=0; i<80; i++) particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5
+            });
+        }
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.strokeStyle = 'rgba(0, 245, 255, 0.1)';
+            ctx.fillStyle = 'rgba(255, 0, 110, 0.3)';
+            particles.forEach((p, i) => {
+                p.x += p.vx; p.y += p.vy;
+                if(p.x<0 || p.x>canvas.width) p.vx *= -1;
+                if(p.y<0 || p.y>canvas.height) p.vy *= -1;
+                ctx.beginPath(); ctx.arc(p.x, p.y, 1, 0, Math.PI*2); ctx.fill();
+                for(let j=i+1; j<particles.length; j++) {
+                    let p2 = particles[j];
+                    let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+                    if(dist < 150) {
+                        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+                    }
+                }
+            });
+            requestAnimationFrame(draw);
+        }
+        window.addEventListener('resize', init);
+        init(); draw();
     </script>
 </body>
 </html>
