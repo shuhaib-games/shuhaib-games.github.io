@@ -10,8 +10,7 @@
 <body>
 
     <div class="scanlines"></div>
-
-    <canvas id="radarmap"></canvas>
+    <canvas id="radarCanvas"></canvas>
 
     <nav>
         <div class="logo">SHUHAIB<span>TP</span></div>
@@ -31,12 +30,16 @@
             <div class="typewriter-container">
                 <span id="typewriter"></span><span class="cursor">|</span>
             </div>
+            <div class="hero-btns">
+                <a href="#missions" class="btn-link">VIEW MISSIONS</a>
+                <a href="#" class="btn-link secondary">DOWNLOAD INTEL</a>
+            </div>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <div class="section-header center-header">
+            <div class="section-header center-all">
                 <span class="tag">CLASSIFIED IDENTIFICATION</span>
                 <h3>MISSION BRIEFING</h3>
             </div>
@@ -44,19 +47,13 @@
                 <p class="meta-data">SUBJECT: SHUHAIB TP</p>
                 <p class="meta-data">CLASS: SYSTEMS ENGINEER / UNITY DEVELOPER (FRESHER)</p>
                 <div class="divider"></div>
-                
                 <p class="bio-text">
                     A highly adaptive Unity Game Developer specializing in constructing robust **C# scripting** logic and immersive **3D & 2D gameplay mechanics**. I focus on building responsive systems where performance meets high-fidelity environmental architecture. Currently deployed in Malappuram, Kerala.
                 </p>
-                <p class="bio-text">
-                    I am engineering the next generation of interactive experiences, specializing in Finite State Machines (FSM) for complex enemy AI and optimizing physics engines for smoother user controllers. Mission-ready for technical challenges in the gaming sector.
-                </p>
-                
                 <div class="stats-grid">
                     <div class="stat-box"><span>4+</span><p>GAMES BUILT</p></div>
-                    <div class="stat-box"><span>Tactical</span><p>C#</p></div>
-                    <div class="stat-box"><span>Expert</span><p>Unity</p></div>
-                    <div class="stat-box"><span>AI</span><p>Pathfinding</p></div>
+                    <div class="stat-box"><span>PRO</span><p>QA & TESTING</p></div>
+                    <div class="stat-box"><span>EXPERT</span><p>AI SYSTEMS</p></div>
                 </div>
             </div>
         </div>
@@ -64,26 +61,26 @@
 
     <section id="missions">
         <div class="container">
-            <div class="section-header center-header">
+            <div class="section-header center-all">
                 <span class="tag">ACTIVE OPERATIONS</span>
                 <h3>MISSIONS</h3>
             </div>
             <div class="mission-grid">
                 <div class="mission-card">
-                    <div class="mission-img" style="background-image: url('images/p1.jpg');"></div>
+                    <div class="mission-img"></div>
                     <div class="mission-info">
                         <span class="status">COMPLETE</span>
                         <h4>ZOMBIE SURVIVAL AI</h4>
-                        <p>3D pathfinding system with enemy AI behavior and custom controllers.</p>
+                        <p>3D pathfinding system with enemy AI behavior.</p>
                         <div class="mission-tech"><span>UNITY 3D</span><span>C#</span></div>
                     </div>
                 </div>
                 <div class="mission-card">
-                    <div class="mission-img" style="background-image: url('images/p2.jpg');"></div>
+                    <div class="mission-img"></div>
                     <div class="mission-info">
                         <span class="status">COMPLETE</span>
                         <h4>SAMURAI DASH 2D</h4>
-                        <p>2D platformer with custom physics and sprite animations.</p>
+                        <p>2D platformer with custom physics and animations.</p>
                         <div class="mission-tech"><span>UNITY 2D</span><span>C#</span></div>
                     </div>
                 </div>
@@ -93,59 +90,41 @@
 
     <section id="skills">
         <div class="container">
-            <div class="section-header center-header">
+            <div class="section-header center-all">
                 <span class="tag">EQUIPMENT & TECH</span>
                 <h3>TECHNICAL LOADOUT</h3>
             </div>
             <div class="loadout-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🎮</div>
-                    <p>UNITY ENGINE</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">#️⃣</div>
-                    <p>C# SCRIPTING</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🤖</div>
-                    <p>AI BEHAVIOR</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <p>BLENDER 3D</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <p>GAME PHYSICS</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🐞</div>
-                    <p>QA & DEBUGGING</p>
-                </div>
+                <div class="skill-card"><span>🎮</span><p>UNITY ENGINE</p></div>
+                <div class="skill-card"><span>#️⃣</span><p>C# SCRIPTING</p></div>
+                <div class="skill-card"><span>🤖</span><p>AI BEHAVIOR</p></div>
+                <div class="skill-card"><span>🎨</span><p>BLENDER 3D</p></div>
+                <div class="skill-card"><span>⚙️</span><p>GAME PHYSICS</p></div>
+                <div class="skill-card"><span>🐞</span><p>QA & DEBUGGING</p></div>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <div class="container">
-            <div class="section-header center-header">
+            <div class="section-header center-all">
                 <span class="tag">SECURE LINE</span>
                 <h3><span class="pulse"></span> RADIO CHANNEL</h3>
             </div>
             <div class="contact-box">
-                <div class="contact-detail">
+                <div class="contact-item">
                     <p class="label">OPERATIVE</p>
                     <p class="value">SHUHAIB TP</p>
                 </div>
-                <div class="contact-detail">
+                <div class="contact-item">
                     <p class="label">LOCATION</p>
                     <p class="value">MALAPPURAM, KERALA</p>
                 </div>
-                <div class="contact-detail">
+                <div class="contact-item">
                     <p class="label">EMAIL INTEL</p>
                     <a href="mailto:shuhaibtp423777@gmail.com" class="value">shuhaibtp423777@gmail.com</a>
                 </div>
-                <div class="contact-detail">
+                <div class="contact-item">
                     <p class="label">ENCRYPTED LINE</p>
                     <a href="tel:+918606912678" class="value">+91 8606912678</a>
                 </div>
@@ -154,89 +133,52 @@
     </section>
 
     <script>
+        // TYPEWRITER SCRIPT
         const textElement = document.getElementById('typewriter');
         const phrases = ["C# / UNITY / AI SYSTEMS", "3D & 2D WORLD BUILDING", "GAMEPLAY PROGRAMMING", "MISSION READY"];
-        let pIdx = 0, cIdx = 0, isDel = false, typeSpeed = 100;
-
+        let pIdx = 0, cIdx = 0, isDel = false;
         function type() {
             const current = phrases[pIdx];
-            textElement.textContent = isDel ? current.substring(0, cIdx - 1) : current.substring(0, cIdx + 1);
+            textElement.textContent = isDel ? current.substring(0, cIdx-1) : current.substring(0, cIdx+1);
             cIdx = isDel ? cIdx - 1 : cIdx + 1;
-            typeSpeed = isDel ? 50 : 100;
-
-            if (!isDel && cIdx === current.length) { isDel = true; typeSpeed = 2000; }
-            else if (isDel && cIdx === 0) { isDel = false; pIdx = (pIdx + 1) % phrases.length; typeSpeed = 500; }
-            setTimeout(type, typeSpeed);
+            let speed = isDel ? 50 : 100;
+            if (!isDel && cIdx === current.length) { isDel = true; speed = 2000; }
+            else if (isDel && cIdx === 0) { isDel = false; pIdx = (pIdx + 1) % phrases.length; speed = 500; }
+            setTimeout(type, speed);
         }
         document.addEventListener('DOMContentLoaded', type);
-    </script>
 
-    <script>
-        const canvas = document.getElementById('radarmap');
+        // LIVE RADAR BACKGROUND SCRIPT
+        const canvas = document.getElementById('radarCanvas');
         const ctx = canvas.getContext('2d');
-        let dots = [];
-        let sweepAngle = 0;
+        let angle = 0;
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resize);
+        resize();
 
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            dots = [];
-            createDots();
-        }
-
-        class Dot {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.width;
-                this.alpha = 0;
-                this.cyan = Math.random() > 0.5;
-            }
-
-            draw() {
-                ctx.fillStyle = this.cyan ? `rgba(0, 245, 255, ${this.alpha})` : `rgba(255, 0, 110, ${this.alpha})`;
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, 1.5, Math.random() * Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        function createDots() {
-            for (let i = 0; i < 50; i++) {
-                dots.push(new Dot());
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            dots.forEach(p => { p.draw(); if(p.alpha > 0) p.alpha -= 0.005; });
+        function drawRadar() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
             
-            ctx.strokeStyle = 'rgba(0, 255, 0, 0.4)';
+            // Grid Lines
+            ctx.strokeStyle = 'rgba(0, 255, 0, 0.05)';
             ctx.lineWidth = 1;
-            ctx.beginPath(); ctx.arc(canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height), 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.arc(canvas.width / 2, canvas.height / 2, canvas.height / 2, 0, Math.PI * 2); ctx.stroke(); ctx.beginPath(); ctx.arc(canvas.width / 2, canvas.height / 2, canvas.height / 4, 0, Math.PI * 2); ctx.stroke();
+            for(let i=0; i<canvas.width; i+=50) { ctx.beginPath(); ctx.moveTo(i,0); ctx.lineTo(i,canvas.height); ctx.stroke(); }
+            for(let j=0; j<canvas.height; j+=50) { ctx.beginPath(); ctx.moveTo(0,j); ctx.lineTo(canvas.width,j); ctx.stroke(); }
 
-            const angleRad = (sweepAngle * Math.PI) / 180;
-            const endX = canvas.width / 2 + Math.cos(angleRad) * canvas.width;
-            const endY = canvas.height / 2 + Math.sin(angleRad) * canvas.width;
-            ctx.strokeStyle = 'rgba(0, 255, 0, 0.8)';
-            ctx.lineWidth = 2;
-            ctx.beginPath(); ctx.moveTo(canvas.width / 2, canvas.height / 2); ctx.lineTo(endX, endY); ctx.stroke(); ctx.strokeStyle = 'rgba(0, 255, 0, 0.2)';
-            ctx.lineWidth = 10; ctx.beginPath(); ctx.moveTo(canvas.width / 2, canvas.height / 2); ctx.lineTo(endX, endY); ctx.stroke(); ctx.strokeStyle = 'rgba(0, 255, 0, 0.05)';
-            ctx.lineWidth = 20; ctx.beginPath(); ctx.moveTo(canvas.width / 2, canvas.height / 2); ctx.lineTo(endX, endY); ctx.stroke();
-
-            dots.forEach(d => {
-                const angleToDot = Math.atan2(d.y - canvas.height / 2, d.x - canvas.width / 2) * (180 / Math.PI);
-                const normalizedAngleToDot = (angleToDot + 360) % 360;
-                const normalizedSweep = (sweepAngle + 360) % 360;
-                if(Math.abs(normalizedSweep - normalizedAngleToDot) < 5) d.alpha = 1;
-            });
-            
-            sweepAngle = (sweepAngle + 1) % 360;
-            requestAnimationFrame(animate);
+            // Radar Sweep
+            const cx = canvas.width/2; const cy = canvas.height/2;
+            const radius = Math.max(canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.arc(cx, cy, radius, angle, angle + 0.2);
+            ctx.lineTo(cx, cy);
+            ctx.fillStyle = 'rgba(0, 255, 0, 0.1)';
+            ctx.fill();
+            angle += 0.01;
+            requestAnimationFrame(drawRadar);
         }
-
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-        animate();
+        drawRadar();
     </script>
 </body>
 </html>
