@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHUHAIB | GAME DEV PORTFOLIO</title>
+    <title>SHUHAIB | MISSION PROFILE</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
@@ -11,12 +11,7 @@
 
     <div class="scanlines"></div>
 
-    <div class="video-container">
-        <div class="overlay"></div>
-        <video autoplay muted loop playsinline id="bg-video">
-            <source src="videos/hero-bg.mp4" type="video/mp4">
-        </video>
-    </div>
+    <div class="animated-bg"></div>
 
     <nav>
         <div class="logo">SHUHAIB<span>TP</span></div>
@@ -50,10 +45,8 @@
                 <p class="meta-data">CLASS: UNITY GAME DEVELOPER (FRESHER)</p>
                 <div class="divider"></div>
                 <p class="bio-text">
-                    I am a passionate <strong>Unity Game Developer</strong> starting my journey in the gaming industry. I love building interactive worlds and learning how to make fun gameplay mechanics.
-                </p>
-                <p class="bio-text">
-                    I specialize in <strong>C# Scripting</strong> and creating both 2D and 3D games. Based in Malappuram, Kerala, I am ready to take on new challenges and build great games.
+                    A highly adaptive Unity Game Developer specializing in <strong>C# scripting</strong> and <strong>gameplay mechanics</strong>. 
+                    I build immersive worlds where performance meets high-fidelity gameplay. Currently deployed in Malappuram, Kerala.
                 </p>
                 <div class="stats-grid">
                     <div class="stat-box"><span>4+</span><p>GAMES BUILT</p></div>
@@ -67,25 +60,25 @@
     <section id="missions">
         <div class="container">
             <div class="section-header">
-                <span class="tag">WORK HISTORY</span>
+                <span class="tag">ACTIVE OPERATIONS</span>
                 <h3>MISSIONS</h3>
             </div>
             <div class="mission-grid">
                 <div class="mission-card">
                     <div class="mission-img" style="background-image: url('images/p1.jpg');"></div>
                     <div class="mission-info">
-                        <span class="status">MISSION COMPLETE</span>
-                        <h4>3D ZOMBIE GAME</h4>
-                        <p>A survival game where I built the player movement and enemy AI.</p>
+                        <span class="status">COMPLETE</span>
+                        <h4>3D ZOMBIE SURVIVAL</h4>
+                        <p>3D FPS system with enemy AI and custom player controllers.</p>
                         <div class="mission-tech"><span>UNITY</span><span>C#</span></div>
                     </div>
                 </div>
                 <div class="mission-card">
                     <div class="mission-img" style="background-image: url('images/p2.jpg');"></div>
                     <div class="mission-info">
-                        <span class="status">MISSION COMPLETE</span>
-                        <h4>2D SAMURAI RUN</h4>
-                        <p>A fast-paced platformer with custom animations and levels.</p>
+                        <span class="status">COMPLETE</span>
+                        <h4>SAMURAI DASH</h4>
+                        <p>2D platformer focusing on physics-based movement and sprites.</p>
                         <div class="mission-tech"><span>UNITY 2D</span><span>C#</span></div>
                     </div>
                 </div>
@@ -113,7 +106,7 @@
     <section id="contact">
         <div class="container">
             <div class="section-header center-text">
-                <span class="tag">GET IN TOUCH</span>
+                <span class="tag">SECURE LINE</span>
                 <h3><span class="pulse"></span> RADIO CHANNEL</h3>
             </div>
             <div class="contact-box">
@@ -138,8 +131,9 @@
     </section>
 
     <script>
+        // TYPEWRITER ANIMATION
         const textElement = document.getElementById('typewriter');
-        const phrases = ["C# PROGRAMMING", "UNITY 3D & 2D", "GAMEPLAY MECHANICS", "MISSION READY"];
+        const phrases = ["C# / UNITY / AI SYSTEMS", "3D & 2D WORLD BUILDING", "GAMEPLAY PROGRAMMING", "MISSION READY"];
         let pIdx = 0, cIdx = 0, isDel = false;
 
         function typeEffect() {
