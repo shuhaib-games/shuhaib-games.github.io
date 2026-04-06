@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHUHAIB | MISSION PROFILE</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,31 +18,66 @@
         </video>
     </div>
 
-    <main>
-        <nav>
-            <div class="logo">SHUHAIB<span>TP</span></div>
-            <div class="nav-links">
-                <a href="#about">BRIEFING</a>
-                <a href="#missions">MISSIONS</a>
-                <a href="#skills">LOADOUT</a>
-                <a href="mailto:your-email@gmail.com" class="btn-neon">ESTABLISH COMMS</a>
-            </div>
-        </nav>
+    <nav>
+        <div class="logo">SHUHAIB<span>TP</span></div>
+        <div class="nav-links">
+            <a href="#hero">HOME</a>
+            <a href="#about">BRIEFING</a>
+            <a href="#missions">MISSIONS</a>
+            <a href="mailto:your-email@gmail.com" class="btn-neon">ESTABLISH COMMS</a>
+        </div>
+    </nav>
 
-        <section id="hero">
-            <div class="hero-content">
-                <h2 class="glitch-text" data-text="UNITY DEVELOPER">UNITY DEVELOPER</h2>
-                <h1 class="main-title">SHUHAIB TP</h1>
-                
-                <div class="typewriter-container">
-                    <span id="typewriter"></span><span class="cursor">|</span>
+    <section id="hero">
+        <div class="hero-content">
+            <h2 class="glitch-text" data-text="UNITY DEVELOPER">UNITY DEVELOPER</h2>
+            <h1 class="main-title">SHUHAIB TP</h1>
+            <div class="typewriter-container">
+                <span id="typewriter"></span><span class="cursor">|</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">CLASSIFIED INTEL</span>
+                <h3>MISSION BRIEFING</h3>
+            </div>
+            
+            <div class="briefing-box">
+                <div class="briefing-content">
+                    <p class="meta-data"><strong>SUBJECT:</strong> SHUHAIB TP</p>
+                    <p class="meta-data"><strong>CLASS:</strong> SYSTEMS ENGINEER / UNITY DEVELOPER</p>
+                    <div class="divider"></div>
+                    <p class="bio-text">
+                        A highly adaptive Unity Game Developer specializing in <strong>C# scripting</strong> and <strong>AI behavior logic</strong>. 
+                        With a tactical background in both 2D and 3D environment architecture, I build immersive worlds where performance meets high-fidelity gameplay. 
+                    </p>
+                    <p class="bio-text">
+                        Expertise in constructing complex <strong>Finite State Machines (FSM)</strong>, optimizing physics engines, and creating responsive character controllers. Currently deployed in Malappuram, Kerala—ready to engineer the next generation of interactive experiences.
+                    </p>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-number">4+</span>
+                            <p class="stat-label">GAMES BUILT</p>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">PRO</span>
+                            <p class="stat-label">QA & TESTING</p>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">EXPERT</span>
+                            <p class="stat-label">AI SYSTEMS</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <script>
-        // TYPEWRITER LOGIC
         const textElement = document.getElementById('typewriter');
         const phrases = [
             "C# / UNITY / AI SYSTEMS",
@@ -59,7 +94,6 @@
 
         function type() {
             const currentPhrase = phrases[phraseIndex];
-            
             if (isDeleting) {
                 textElement.textContent = currentPhrase.substring(0, charIndex - 1);
                 charIndex--;
@@ -72,16 +106,14 @@
 
             if (!isDeleting && charIndex === currentPhrase.length) {
                 isDeleting = true;
-                typeSpeed = 2000; // Pause at end
+                typeSpeed = 2000;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 phraseIndex = (phraseIndex + 1) % phrases.length;
                 typeSpeed = 500;
             }
-
             setTimeout(type, typeSpeed);
         }
-
         document.addEventListener('DOMContentLoaded', type);
     </script>
 </body>
